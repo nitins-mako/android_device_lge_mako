@@ -2,11 +2,8 @@
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
 # Inherit Carbon product configuration
-$(call inherit-product, vendor/carbon/config/common.mk)
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -16,7 +13,7 @@ $(call inherit-product, device/lge/mako/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
-PRODUCT_NAME := carbon_mako
+PRODUCT_NAME := bliss_mako
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := LGE
